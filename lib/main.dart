@@ -1,7 +1,11 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'pages/top_page.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
   runApp(MyApp());
 }
 
@@ -19,7 +23,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//todo Flutter FireBase連携
 //todo Topページにメモリスト表示
 //todo リストタップでメモ詳細表示
 //todo メモ追加画面のUI作成
