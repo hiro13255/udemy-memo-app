@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//todo iOSFireBaseプロジェクト作成
 //todo Cloud FireStore設定
 //todo Flutter FireBase連携
 //todo Topページにメモリスト表示
