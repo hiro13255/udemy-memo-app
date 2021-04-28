@@ -23,6 +23,11 @@ class _TopPageState extends State<TopPage> {
     memos = FirebaseFirestore.instance.collection('memo');
   }
 
+  Future<void> deleteMemo(String docId) async {
+    var document = FirebaseFirestore.instance.collection('memo').doc(docId);
+    document.delete();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,8 +69,9 @@ class _TopPageState extends State<TopPage> {
                             ListTile(
                               leading: Icon(Icons.delete, color: Colors.redAccent,),
                               title: Text('削除'),
-                              onTap: (){
-
+                              onTap: () async{
+                                await deleteMemo(snapshot.data.docs[index].id);
+                                Navigator.pop(context);
                               },
                             )
                           ],

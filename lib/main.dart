@@ -23,5 +23,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-//todo メモ削除機能
