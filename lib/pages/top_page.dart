@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:udemy_flutter/model/memo.dart';
+import 'package:udemy_flutter/pages/memo_page.dart';
 
 class TopPage extends StatefulWidget {
   TopPage({Key key, this.title}) : super(key: key);
@@ -49,6 +50,10 @@ class _TopPageState extends State<TopPage> {
         itemBuilder: (context, index) {
           return ListTile(
             title: Text(memoList[index].title),
+            onTap: () {
+              //確認画面へ遷移
+              Navigator.push(context, MaterialPageRoute(builder: (context) => MemoPage(memoList[index])));
+            },
           );
         },
       ),

@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -23,7 +24,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//todo リストタップでメモ詳細表示
 //todo メモ追加画面のUI作成
 //todo 追加ボタンタップでメモ追加
 //todo 追加したメモのリアルタイム取得表示
