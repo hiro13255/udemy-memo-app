@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//todo アプリタイトル変更
 //todo メモクラス定義
 //todo AndroidFireBaseプロジェクト作成
 //todo iOSFireBaseプロジェクト作成

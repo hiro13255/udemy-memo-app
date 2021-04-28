@@ -22,7 +22,7 @@ class _TopPageState extends State<TopPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text('Firebase x Flutter'),
       ),
       body: Center(
         child: Column(
