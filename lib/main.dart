@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//todo Cloud FireStore設定
 //todo Flutter FireBase連携
 //todo Topページにメモリスト表示
 //todo リストタップでメモ詳細表示
