@@ -24,7 +24,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//todo メモ追加画面のUI作成
 //todo 追加ボタンタップでメモ追加
 //todo 追加したメモのリアルタイム取得表示
 //todo リスト右下のボタンタップでボトムシート表示
