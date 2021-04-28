@@ -43,6 +43,37 @@ class _TopPageState extends State<TopPage> {
             itemBuilder: (context, index) {
               return ListTile(
                 title: Text(snapshot.data.docs[index].data()['title']),
+                // リストの右側に表示
+                trailing: IconButton(
+                  icon: Icon(Icons.edit),
+                  onPressed: () {
+                    //ダイアログ表示処理
+                    showModalBottomSheet(context: context, builder: (context) {
+                      return SafeArea(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            ListTile(
+                              leading: Icon(Icons.edit, color: Colors.blueAccent,),
+                              title: Text('編集'),
+                              onTap: (){
+
+                              },
+                            ),
+                            ListTile(
+                              leading: Icon(Icons.delete, color: Colors.redAccent,),
+                              title: Text('削除'),
+                              onTap: (){
+
+                              },
+                            )
+                          ],
+                        ),
+                      );
+                    });
+
+                  },
+                ),
                 onTap: () {
                   //確認画面へ遷移
                   Navigator.push(context, MaterialPageRoute(builder: (context) => MemoPage(snapshot.data.docs[index])));
