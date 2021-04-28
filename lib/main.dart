@@ -23,7 +23,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//todo Topページにメモリスト表示
 //todo リストタップでメモ詳細表示
 //todo メモ追加画面のUI作成
 //todo 追加ボタンタップでメモ追加
