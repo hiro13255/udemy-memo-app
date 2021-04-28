@@ -24,6 +24,4 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//todo リスト右下のボタンタップでボトムシート表示
-//todo 編集画面作成、メモ更新機能
 //todo メモ削除機能

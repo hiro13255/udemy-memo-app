@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:udemy_flutter/model/memo.dart';
 import 'package:udemy_flutter/pages/memo_page.dart';
 
-import 'add_memo_page.dart';
+import 'add_edit_memo_page.dart';
 
 class TopPage extends StatefulWidget {
   TopPage({Key key, this.title}) : super(key: key);
@@ -57,7 +57,8 @@ class _TopPageState extends State<TopPage> {
                               leading: Icon(Icons.edit, color: Colors.blueAccent,),
                               title: Text('編集'),
                               onTap: (){
-
+                                Navigator.pop(context);
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => AddEditMemoPage(memo: snapshot.data.docs[index])));
                               },
                             ),
                             ListTile(
@@ -85,7 +86,7 @@ class _TopPageState extends State<TopPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => AddMemoPage()));
+          Navigator.push(context, MaterialPageRoute(builder: (context) => AddEditMemoPage()));
         },
         tooltip: 'Increment',
         child: Icon(Icons.add),
